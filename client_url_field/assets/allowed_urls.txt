@@ -1,8 +1,0 @@
-google.com
-www.google.com
-google.co.in
-test.google.co.in
-bing.com
-qed42.net
-test.qed42.net
-two.qed42.net
