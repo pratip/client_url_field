@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+
+/**
+ * Implements hook_entity_predelete().
+ *
+ * @throws \Exception
+ */
+function client_url_field_entity_predelete(EntityInterface $entity) {
+  // If this is the "field_client_url" field entity getting deleted, stop it
+  // from happening.
+  if (str_contains($entity->id(), 'field_client_url')) {
+    throw new AccessDeniedHttpException('This field cannot be deleted once added to an entity.');
+  }
+}
