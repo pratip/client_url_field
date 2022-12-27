@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - client_url_field
+    - node
+id: node.field_client_url
+field_name: field_client_url
+entity_type: node
+type: client_url
+settings:
+  allowed_values:
+    -
+      value: google.com
+      label: google.com
+    -
+      value: www.google.com
+      label: www.google.com
+    -
+      value: google.co.in
+      label: google.co.in
+    -
+      value: test.google.co.in
+      label: test.google.co.in
+    -
+      value: bing.com
+      label: bing.com
+    -
+      value: qed42.net
+      label: qed42.net
+    -
+      value: test.qed42.net
+      label: test.qed42.net
+    -
+      value: two.qed42.net
+      label: two.qed42.net
+  allowed_values_function: ''
+module: client_url_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
